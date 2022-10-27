@@ -9,3 +9,6 @@ How to run the code on VS with Live Server Extension:
     1) Follow the steps on GitHub
     2) SSH passphrase is needed 
 4) Check on GitHub 
+
+
+Testing the Git Workflow!
