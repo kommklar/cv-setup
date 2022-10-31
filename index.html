@@ -12,14 +12,18 @@
     <header>
         <h1>Sascha Hurle</h1>
         <p>I am a Product Owner</p>
+        <a href="#profile">Profile</a>
+        <a href="#experiance">Experiance</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
     </header>
     <main>
-        <article>
+        <article id="profile">
             <h2>Profile</h2>
             <p>Hi, I am Sascha and <strong>I am super motivated</strong> to learn coding. I had different approches to learm coding but none worked. Thats why I am here :). Let´s go!
         </p>
     </article>
-        <article>
+        <article id="experiance">
             <h2>Experience</h2>
             <section>
                 <header>
@@ -27,7 +31,8 @@
                     <p> 06/21 - Present </p>
                 </header>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ut itaque impedit temporibus dolorum nemo atque esse, modi voluptatem incidunt rerum! Fugit assumenda quasi amet iste rerum vel dignissimos temporibus!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ut itaque impedit temporibus dolorum nemo <br> <!-- br ist ein Breakpoint -->
+                    atque esse, modi voluptatem incidunt rerum! Fugit assumenda quasi amet iste rerum vel dignissimos temporibus!
                 </p>
             </section>
             <section>
@@ -36,18 +41,36 @@
                     <p>04/18 - 05/21</p>
                 </header>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, quis iusto. Error ut facilis unde, ex qui enim eligendi deserunt perferendis illo ipsa culpa molestias consequuntur nihil numquam soluta dicta.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, quis iusto. Error ut facilis unde, <br>
+                    ex qui enim eligendi deserunt perferendis illo ipsa culpa molestias consequuntur nihil numquam soluta dicta.
                 </p>
             </section>
         </article>
-        <article>
+        <article id="skills">
             <h2>Skills</h2>
             <section>
                 <h3>Soft Skills</h3>
-                <h3>TeraVolt</h3>
+                <ul> <!-- Geht auch ohne ul element. Wofür braucht man das dann? einfach für die Semantik?-->
+                    <li>Dope</li>
+                    <li>List</li>
+                    <li>Item</li>
+                </ul>
             </section>
-        <article>
-            <h2>Profile</h2>
+            <section>
+                <h3>Technical Skills</h3>
+                <ol type="1">
+                    <li>Dope</li>
+                    <li>List</li>
+                    <li>Item</li>
+                </ol>     
+            </section>
+        <article id="contact">
+            <h2>Contact</h2>
+            <ol type="1">
+                <li><a href="mailto:sascha.hurle@icloud.com">Email</a></li>
+                <li><a href="mailto:sascha.hurle@gmail.com">Troll Mail</a></li>
+                <li>Twitter: <a href="https://twitter.com/komm_klar_">komm_klar_</a></li>
+            </ol>
         </article>
     </main>
 </body>
