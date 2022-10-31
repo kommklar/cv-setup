@@ -3,20 +3,33 @@
 }
 
 * {
-    font-family: "Lobster", sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Oswald', sans-serif;
 }
 
 body {
     margin: 0px;
 }
 
-h1
-h2
-h3
-h4
-h5
-h6 {
-    font-family: 'Roboto', cursive;
+/**************************************************************/
+/* Specific Stylings */
+
+.header {
+    padding: 50px 10px;
+    text-align: center;
+    background-color: olivedrab;
 }
 
-
+.main {
+    max-width: 600px;
+    margin: 0 auto; /* This brings the text within the max width so left and right have the same margin*/
+    padding: 20px;
+}
