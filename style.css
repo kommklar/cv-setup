@@ -25,7 +25,8 @@ body {
 .header {
     padding: 50px 10px;
     text-align: center;
-    background-color: olivedrab;
+    color: white;
+    background-color:rgb(56, 128, 128);
 }
 
 .main {
@@ -33,3 +34,10 @@ body {
     margin: 0 auto; /* This brings the text within the max width so left and right have the same margin*/
     padding: 20px;
 }
+
+.skill-list {
+    padding-left: 40px;
+    margin-left: 0;
+    font-size: 100%;
+    list-style-image: linear-gradient(to left bottom, rgb(56, 128, 128), white);
+  }
