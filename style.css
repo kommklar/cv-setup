@@ -34,6 +34,20 @@ p {
     background-color:rgb(56, 128, 128);
 }
 
+.subheadline {
+    font-size: 20px;
+}
+
+.subheadline::before {
+    content: "🐻 ";
+    font-size: 50px;
+}
+
+.subheadline::after {
+    content: " 🐻";
+    font-size: 50px;
+}
+
 .main {
     max-width: 800px;
     margin: 0 auto; /* This brings the text within the max width so left and right have the same margin*/
@@ -64,11 +78,15 @@ article:first-child {
 /* Navigations Stylings (Reihenfolge einhalten, da sonst der Status nicht übernommen wird.)*/
 
 .navigation:link {
-    color: rgb(214, 214, 214);
-    padding-right: 30px;
-    padding-left: 30px;
+    color: rgb(56, 128, 128);
+    background-color: antiquewhite;
     padding: 15px;
+    font-size: bold;
+    width: 100px;
+    height: 100px;
 }
+
+
 
 .navigation:visited {
     color: rgb(36, 38, 45);
@@ -80,4 +98,12 @@ article:first-child {
 
 .navigation:active {
     background-color: blueviolet;
+}
+
+/**************************************************************/
+/* Pseudo Elements und Selection styling */
+
+::selection {
+    color: white;
+    background-color: rgb(56, 128, 128);
 }
