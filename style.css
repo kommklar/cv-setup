@@ -20,10 +20,6 @@ body {
     background-color: antiquewhite;
 }
 
-p {
-    padding-bottom: 20px;
-}
-
 /**************************************************************/
 /* Specific Stylings */
 
@@ -32,6 +28,7 @@ p {
     text-align: center;
     color: white;
     background-color:rgb(56, 128, 128);
+    position: relative; /* Das funktioniert hier noch nicht mit sticky */
 }
 
 .subheadline {
@@ -51,18 +48,26 @@ p {
 .main {
     max-width: 800px;
     margin: 0 auto; /* This brings the text within the max width so left and right have the same margin*/
-    padding: 20px;
-    padding: 0px;
+    padding: 10px;
 }
 
 .main > * + * {
-    padding-bottom: 15px;
-    text-indent: 0px;
+    margin-top: 20px;
+    padding-left: 20px;
     border-top: 5px solid rgb(56, 128, 128);
 }
 
-article:first-child {
-    padding-top: 15px;
+.main > * {
+    padding-left: 20px;
+}
+
+.main > *:first-child {
+    padding-top: 10px;
+}
+
+.article-header {
+    position: relative;
+    left: -20px;
 }
 
 .skill-list {
@@ -77,8 +82,18 @@ article:first-child {
     display: inline-block;
 }
 
-.experiance-subheading {
+.experience-subheading {
     display: inline-block;
+}
+
+.hire-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: white;
+    background-color: rgb(44, 43, 43);
+    padding: 5px;
+    border-radius: 10%;
 }
 
 /**************************************************************/
@@ -109,7 +124,7 @@ article:first-child {
 /**************************************************************/
 /* Pseudo Elements und Selection styling */
 
-::selection {
+::selection { /* Wenn man Text markieren will */ 
     color: white;
     background-color: rgb(56, 128, 128);
 }
