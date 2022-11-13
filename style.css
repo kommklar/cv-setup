@@ -2,7 +2,7 @@
     box-sizing: border-box; 
 }
 
-* {
+html {
     font-family: 'Roboto', sans-serif;
 }
 
@@ -73,6 +73,13 @@ article:first-child {
     list-style-image: linear-gradient(to left bottom, rgb(56, 128, 128), white);
 }
 
+.experience-heading {
+    display: inline-block;
+}
+
+.experiance-subheading {
+    display: inline-block;
+}
 
 /**************************************************************/
 /* Navigations Stylings (Reihenfolge einhalten, da sonst der Status nicht übernommen wird.)*/
@@ -86,14 +93,13 @@ article:first-child {
     height: 100px;
 }
 
-
-
 .navigation:visited {
     color: rgb(36, 38, 45);
 }
 
 .navigation:hover {
     background-color: rgb(46, 54, 54);
+    color: white;
 }
 
 .navigation:active {
