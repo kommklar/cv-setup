@@ -4,6 +4,7 @@
 
 html {
     font-family: 'Roboto', sans-serif;
+    font-size: 16px;
 }
 
 h1,
@@ -24,57 +25,62 @@ body {
 /* Specific Stylings */
 
 .header {
-    padding: 30px;
+    padding: 2em;
     text-align: center;
     color: white;
     background-color:rgb(56, 128, 128);
     position: relative; /* Das funktioniert hier noch nicht mit sticky */
 }
 
+.header-headlines {
+    font-size: 4rem;
+}
+
+.header-name {
+    font-size: 1em;
+}
+
 .subheadline {
-    font-size: 20px;
+    font-size: .25em;
+    padding-bottom: 2rem;
 }
 
 .subheadline::before {
     content: "🐻 ";
-    font-size: 50px;
 }
 
 .subheadline::after {
     content: " 🐻";
-    font-size: 50px;
 }
 
 .main {
-    max-width: 800px;
+    max-width: 70ch;
     margin: 0 auto; /* This brings the text within the max width so left and right have the same margin*/
-    padding: 10px;
+    padding: 1rem;
 }
 
 .main > * + * {
-    margin-top: 20px;
-    padding-left: 20px;
-    border-top: 5px solid rgb(56, 128, 128);
+    margin-top: 2rem;
 }
 
 .main > * {
-    padding-left: 20px;
+    padding-left: 1.5rem; /* Verstehe nicht, warum ich hier auf 1,5 für das Alignment komme, da der .article-header auf 1rem ist */
+    border-top: .3rem solid rgb(56, 128, 128)
 }
 
 .main > *:first-child {
-    padding-top: 10px;
+    border-top: none;
 }
 
 .article-header {
     position: relative;
-    left: -20px;
+    left: -1em;
 }
 
 .skill-list {
-    padding-left: 40px;
-    padding-bottom: 16px;  
-    margin-left: 0;
-    font-size: 100%;
+    padding-left: 2em;
+    padding-bottom: 1em;  
+    margin-left: 1em;
     list-style-image: linear-gradient(to left bottom, rgb(56, 128, 128), white);
 }
 
@@ -88,12 +94,12 @@ body {
 
 .hire-button {
     position: absolute;
-    top: 10px;
-    right: 20px;
+    top: 1rem;
+    right: 2rem;
     color: white;
     background-color: rgb(44, 43, 43);
-    padding: 5px;
-    border-radius: 10%;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
 }
 
 /**************************************************************/
@@ -102,10 +108,7 @@ body {
 .navigation:link {
     color: rgb(56, 128, 128);
     background-color: antiquewhite;
-    padding: 15px;
-    font-size: bold;
-    width: 100px;
-    height: 100px;
+    padding: 1rem;
 }
 
 .navigation:visited {
