@@ -131,3 +131,35 @@ body {
     color: white;
     background-color: rgb(56, 128, 128);
 }
+
+/**************************************************************/
+/* Breakpoints and Media Queries */
+
+@media screen and (min-width: 786px) {
+    html {
+        font-size: 20px;
+    }
+
+    .main > * + * {
+        margin-top: 3rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    html {
+        font-size: 30px;
+    }
+
+    .hire-button {
+        position: fixed;
+    }
+}
+@media print {
+    nav {
+        display: none;
+    }
+
+    .hire-button {
+        display: none;
+    }
+}
