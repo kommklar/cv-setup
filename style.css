@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box; 
-}
+}  
 
 html {
     font-family: 'Roboto', sans-serif;
@@ -25,11 +25,15 @@ body {
 /* Specific Stylings */
 
 .header {
+    position: sticky;
+    top: 0;
     padding: 2em;
+    z-index: 2; /* Definiert den Layer */ 
+
     text-align: center;
     color: white;
+
     background-color:rgb(56, 128, 128);
-    position: relative; /* Das funktioniert hier noch nicht mit sticky */
 }
 
 .header-headlines {
@@ -52,7 +56,7 @@ body {
 .subheadline::after {
     content: " 🐻";
 }
-
+ 
 .main {
     max-width: 70ch;
     margin: 0 auto; /* This brings the text within the max width so left and right have the same margin*/
@@ -64,7 +68,7 @@ body {
 }
 
 .main > * {
-    padding-left: 1.5rem; /* Verstehe nicht, warum ich hier auf 1,5 für das Alignment komme, da der .article-header auf 1rem ist */
+    padding-left: 1rem; 
     border-top: .3rem solid rgb(56, 128, 128)
 }
 
@@ -73,9 +77,11 @@ body {
 }
 
 .article-header {
-    position: relative;
-    left: -1em;
-}
+    margin-left: -1rem;
+/*     position: relative;
+    left: -1rem;
+ */
+} 
 
 .skill-list {
     padding-left: 2em;
@@ -96,19 +102,19 @@ body {
     position: absolute;
     top: 1rem;
     right: 2rem;
-    color: white;
-    background-color: rgb(44, 43, 43);
     padding: 0.5rem;
     border-radius: 0.2rem;
+    color: white;
+    background-color: rgb(44, 43, 43);
 }
 
 /**************************************************************/
 /* Navigations Stylings (Reihenfolge einhalten, da sonst der Status nicht übernommen wird.)*/
 
 .navigation:link {
+    padding: 1rem;
     color: rgb(56, 128, 128);
     background-color: antiquewhite;
-    padding: 1rem;
 }
 
 .navigation:visited {
@@ -116,8 +122,8 @@ body {
 }
 
 .navigation:hover {
-    background-color: rgb(46, 54, 54);
     color: white;
+    background-color: rgb(46, 54, 54);
 }
 
 .navigation:active {
@@ -133,11 +139,11 @@ body {
 }
 
 /**************************************************************/
-/* Breakpoints and Media Queries */
+/* Breakpoints */
 
 @media screen and (min-width: 786px) {
     html {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .main > * + * {
@@ -147,13 +153,16 @@ body {
 
 @media screen and (min-width: 992px) {
     html {
-        font-size: 30px;
+        font-size: 20px;
     }
 
     .hire-button {
         position: fixed;
     }
 }
+
+/* Print Anpassungen */ 
+
 @media print {
     nav {
         display: none;
