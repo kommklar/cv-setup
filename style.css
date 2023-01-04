@@ -29,10 +29,8 @@ body {
     top: 0;
     padding: 2em;
     z-index: 2; /* Definiert den Layer */ 
-
     text-align: center;
     color: white;
-
     background-color:rgb(56, 128, 128);
 }
 
@@ -111,8 +109,13 @@ body {
 /**************************************************************/
 /* Navigations Stylings (Reihenfolge einhalten, da sonst der Status nicht übernommen wird.)*/
 
+.navigation-box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
 .navigation:link {
-    padding: 1rem;
     color: rgb(56, 128, 128);
     background-color: antiquewhite;
 }
@@ -149,6 +152,11 @@ body {
     .main > * + * {
         margin-top: 3rem;
     }
+
+    .navigation-box {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
 }
 
 @media screen and (min-width: 992px) {
@@ -164,7 +172,7 @@ body {
 /* Print Anpassungen */ 
 
 @media print {
-    nav {
+    .navigation-box {
         display: none;
     }
 
