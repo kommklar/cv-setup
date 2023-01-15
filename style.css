@@ -88,8 +88,9 @@ body {
     list-style-image: linear-gradient(to left bottom, rgb(56, 128, 128), white);
 }
 
-.experience-heading {
-    display: inline-block;
+.experience-header {
+    display: flex;
+    flex-direction: column;
 }
 
 .experience-subheading {
@@ -112,7 +113,8 @@ body {
 .navigation-box {
     display: flex;
     flex-direction: column;
-    text-align: center;
+    align-items: center; /* Elements size depends on text lenght */
+    /* text-align: center; Don´t no if this is needed? */
 }
 
 .navigation:link {
@@ -155,7 +157,19 @@ body {
 
     .navigation-box {
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: center;
+    }
+
+    .navigation:link + .navigation:link {
+        margin-left: 1rem;
+    }
+
+    .experience-header {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline; /* Bringt den Text auf eine Linie */ 
+        justify-content: space-between; /* Schiebt das Flexelement nach recht an den Rand. Verteilt quasi die Elemente auf der Breite. */
+
     }
 }
 
