@@ -18,20 +18,29 @@ h6 {
 
 body {
     margin: 0px;
-    background-color: antiquewhite;
+    background-color: white;
+}
+
+a,
+a:link,
+a:hover,
+a:visited,
+a:active {
+  color: black;
 }
 
 /**************************************************************/
 /* Specific Stylings */
 
 .header {
+    padding: 2rem;
+    padding-top: 4.5rem;
+    text-align: center;
+    background-image: linear-gradient(45deg, #006d77 10%,#e29578);
     position: sticky;
     top: 0;
-    padding: 2em;
-    z-index: 2; /* Definiert den Layer */ 
-    text-align: center;
+    z-index: 2;
     color: white;
-    background-color:rgb(56, 128, 128);
 }
 
 .header-headlines {
@@ -67,7 +76,7 @@ body {
 
 .main > * {
     padding-left: 1rem; 
-    border-top: .3rem solid rgb(56, 128, 128)
+    border-top: .3rem solid #006d77;
 }
 
 .main > *:first-child {
@@ -107,17 +116,38 @@ body {
     background-color: rgb(44, 43, 43);
 }
 
+.footer {
+    margin-top: 2rem;
+    padding: 2rem; /* Hier will der Gradiant nicht */
+    background-image: linear-gradient(135deg,#006d77 10%,#e29578);
+    color: white; 
+}
+
+.footer-text {
+    margin: 0px;
+    text-align: center;
+}
+
+.footer-link {
+    color: white; /* Warum bekomme ich das nicht weiß? Überschreibt die a class das von oben? */
+}
+
+
 /**************************************************************/
 /* Navigations Stylings (Reihenfolge einhalten, da sonst der Status nicht übernommen wird.)*/
 
 .navigation-box {
+
     display: flex;
-    flex-direction: column;
-    align-items: center; /* Elements size depends on text lenght */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; /*Elements size depends on text lenght */
     /* text-align: center; Don´t no if this is needed? */
 }
 
 .navigation:link {
+    margin-left: 1rem; /* Das würde ich gerne noch zentrieren und den Margin vom ersten Element wegbekommen. Versucht mit Child hat nicht geklappt */
+    align-items: center;
     color: rgb(56, 128, 128);
     background-color: antiquewhite;
 }
