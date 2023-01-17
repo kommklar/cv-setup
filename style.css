@@ -21,19 +21,19 @@ body {
     background-color: white;
 }
 
-a,
+a, 
 a:link,
 a:hover,
 a:visited,
 a:active {
-  color: black;
+  color: inherit;
 }
 
 /**************************************************************/
 /* Specific Stylings */
 
 .header {
-    padding: 2rem;
+    padding: 1rem;
     padding-top: 4.5rem;
     text-align: center;
     background-image: linear-gradient(45deg, #006d77 10%,#e29578);
@@ -119,8 +119,8 @@ a:active {
 .footer {
     margin-top: 2rem;
     padding: 2rem; /* Hier will der Gradiant nicht */
-    background-image: linear-gradient(135deg,#006d77 10%,#e29578);
     color: white; 
+    background-image: linear-gradient(135deg,#006d77 10%,#e29578);
 }
 
 .footer-text {
@@ -128,32 +128,31 @@ a:active {
     text-align: center;
 }
 
-.footer-link {
-    color: white; /* Warum bekomme ich das nicht weiß? Überschreibt die a class das von oben? */
-}
-
-
 /**************************************************************/
 /* Navigations Stylings (Reihenfolge einhalten, da sonst der Status nicht übernommen wird.)*/
 
 .navigation-box {
-
+    max-width: 70ch;
+    margin: 0 auto;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center; /*Elements size depends on text lenght */
-    /* text-align: center; Don´t no if this is needed? */
+    border: 0.3rem black;
+    justify-content: space-around;
+     /*Elements size depends on text lenght */
+}
+
+.navigation {
+    width: max-content;
+    outline: 0.5rem black solid; /* lieber Outline nutzen, da dann layout nicht betroffen. */
 }
 
 .navigation:link {
-    margin-left: 1rem; /* Das würde ich gerne noch zentrieren und den Margin vom ersten Element wegbekommen. Versucht mit Child hat nicht geklappt */
-    align-items: center;
-    color: rgb(56, 128, 128);
-    background-color: antiquewhite;
+    width: 10rem;
+    color: white;
+    background-color: transparent 100%;
 }
 
 .navigation:visited {
-    color: rgb(36, 38, 45);
+    color: white; /* Muss ich nochmal umstellen */
 }
 
 .navigation:hover {
@@ -183,11 +182,6 @@ a:active {
 
     .main > * + * {
         margin-top: 3rem;
-    }
-
-    .navigation-box {
-        flex-direction: row;
-        justify-content: center;
     }
 
     .navigation:link + .navigation:link {
