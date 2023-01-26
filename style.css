@@ -18,8 +18,26 @@ h6 {
 
 body {
     margin: 0px;
-    background-color: white;
+    --color: black;
+    --background-color: white;
+    --background-image: linear-gradient(45deg, #006d77 10%,#e29578);
+    --color-header: white;
+    --border-color: #006d77;
+    --list-button-collor: linear-gradient(to left bottom, rgb(56, 128, 128), var(--color-header)), #006d77 ;
+    --hire-button: rgb(44, 43, 43);
+    --navigation-hover: rgb(46, 54, 54);
+    --navigation-active: blueviolet;
 }
+
+@media screen and (prefers-color-scheme: dark) {
+    body { 
+        background-color: black;
+        color: white;
+        --background-image: linear-gradient(45deg, black 80%,#e29578);
+        --border-color: white;
+    }
+}
+
 
 a, 
 a:link,
@@ -34,13 +52,12 @@ a:active {
 
 .header {
     padding: 1rem;
-    padding-top: 4.5rem;
     text-align: center;
-    background-image: linear-gradient(45deg, #006d77 10%,#e29578);
+    background-image: var(--background-image);
     position: sticky;
     top: 0;
     z-index: 2;
-    color: white;
+    color: var(--color-header);
 }
 
 .header-headlines {
@@ -76,7 +93,7 @@ a:active {
 
 .main > * {
     padding-left: 1rem; 
-    border-top: .3rem solid #006d77;
+    border-top: .3rem solid var(--border-color);
 }
 
 .main > *:first-child {
@@ -85,16 +102,13 @@ a:active {
 
 .article-header {
     margin-left: -1rem;
-/*     position: relative;
-    left: -1rem;
- */
 } 
 
 .skill-list {
     padding-left: 2em;
     padding-bottom: 1em;  
     margin-left: 1em;
-    list-style-image: linear-gradient(to left bottom, rgb(56, 128, 128), white);
+    list-style-image: var(--list-button-collor); /* Das funzt noch nicht */ 
 }
 
 .experience-header {
@@ -112,15 +126,15 @@ a:active {
     right: 2rem;
     padding: 0.5rem;
     border-radius: 0.2rem;
-    color: white;
-    background-color: rgb(44, 43, 43);
+    color: var(--color-header);
+    background-color: var(--hire-button);
 }
 
 .footer {
     margin-top: 2rem;
     padding: 2rem; /* Hier will der Gradiant nicht */
-    color: white; 
-    background-image: linear-gradient(135deg,#006d77 10%,#e29578);
+    color: var(--color-header); 
+    background-image: var(--background-image)
 }
 
 .footer-text {
@@ -135,41 +149,38 @@ a:active {
     max-width: 70ch;
     margin: 0 auto;
     display: flex;
-    border: 0.3rem black;
     justify-content: space-around;
      /*Elements size depends on text lenght */
 }
-
-.navigation {
-    width: max-content;
-    outline: 0.5rem black solid; /* lieber Outline nutzen, da dann layout nicht betroffen. */
-}
+    /* lieber Outline nutzen, da dann layout nicht betroffen. */
 
 .navigation:link {
     width: 10rem;
-    color: white;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    color: var(--color-header);
     background-color: transparent 100%;
 }
 
 .navigation:visited {
-    color: white; /* Muss ich nochmal umstellen */
+    color: var(--color-header); /* Muss ich nochmal umstellen */
 }
 
 .navigation:hover {
-    color: white;
-    background-color: rgb(46, 54, 54);
+    color: var(--color-header);
+    background-color: var(--navigation-hover) ;
 }
 
 .navigation:active {
-    background-color: blueviolet;
+    background-color: var(--navigation-active);
 }
 
 /**************************************************************/
 /* Pseudo Elements und Selection styling */
 
 ::selection { /* Wenn man Text markieren will */ 
-    color: white;
-    background-color: rgb(56, 128, 128);
+    color: var(--color-header);
+    background-color: var(--border-color)
 }
 
 /**************************************************************/
