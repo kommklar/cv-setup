@@ -100,9 +100,20 @@ a:active {
     border-top: none;
 }
 
+.main-article {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+
+}
+
 .article-header {
     margin-left: -1rem;
 } 
+
+.skill-wrapper {
+    display: flex; /* Hier muss ich mir nochmal die Flexbox anschauen um die Abstände ordentlich zu machen */
+    justify-content: space-around;
+}
 
 .skill-list {
     padding-left: 2em;
