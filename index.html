@@ -1,101 +1,360 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>CV</title> <!-- Title wird im Tab angezeigt. Titel oberhalb der CSS / Fonts, damit der Titel angezeigt wird -->
-    <meta name="author" content="Sascha alias kommklar">
-    <meta name="description" content="This will be my CV">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sascha Hurle — Portfolio</title>
+  <meta name="author" content="Sascha Hurle">
+  <meta name="description" content="Portfolio of Sascha Hurle — Product Owner & Digital Strategist">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <!--  <button class="hire-button">Hire me</button> -->
-        <aside class="hire-button">Hire me</aside>
-        <div class="header-headlines">
-            <h1 class="header-name">Sascha Hurle</h1>
-            <p class="subheadline">I am a Product Owner</p>
-        </div>
-        <nav class="navigation-box">
-            <a class="navigation" href="#profile">Profile</a>
-            <a class="navigation" href="#experiance">Experience</a>
-            <a class="navigation" href="#skills">Skills</a>
-            <a class="navigation" href="#contact">Contact</a>
-        </nav>
-    </header>
-    <main class="main">
-        <article class="main-article" id="profile">
-            <h2 class="article-header">Profile</h2>
-            <p>Hi, I am Sascha and I am super motivated to learn coding. I had different approches to learn coding but none worked. Thats why I am here :). Lets go!
-            </p>
-        </article>
-        <article class="main-article" id="experience">
-            <h2 class="article-header">Experience</h2>
-            <div class="experience-wrapper">
-                <section>
-                    <header class="experience-header">
-                        <h3 class="experience-heading">SWR - PO</h3>
-                        <p class="experience-subheading"> 06/21 - Present </p>
-                    </header>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ut itaque impedit temporibus dolorum nemo <br> <!-- br ist ein Breakpoint -->
-                        atque esse, modi voluptatem incidunt rerum! Fugit assumenda quasi amet iste rerum vel dignissimos temporibus!
-                    </p>
-                </section>
-                <section>
-                    <header class="experience-header">
-                        <h3 class="experience-heading">TeraVolt - PM / PO</h3>
-                        <p class="experience-subheading">04/18 - 05/21</p>
-                    </header>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, quis iusto. Error ut facilis unde, <br>
-                        ex qui enim eligendi deserunt perferendis illo ipsa culpa molestias consequuntur nihil numquam soluta dicta.
-                    </p>
-                </section>
-            </div>
-        </article>
-            <article class="main-article" id="skills">
-                <h2 class="article-header">Skills</h2>
-                <div class="skill-wrapper">
-                    <section>
-                        <h3>Soft Skills</h3>
-                        <ul class="skill-list"> 
-                            <li>Dope</li>
-                            <li>List</li>
-                            <li>Item</li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h3>Technical Skills</h3>
-                        <ul class="skill-list">
-                            <li>Dope</li>
-                            <li>List</li>
-                            <li>Item</li>
-                        </ul>     
-                    </section>
-                </div>
-            </article>
-        <article class="main-article" id="contact">
-            <h2 class="article-header">Contact</h2>
-            <ol type="1">
-                <li><a href="mailto:sascha.hurle@diesdas.com">Email</a></li>
-                <li><a href="mailto:sascha.hurle@gmail.com">Troll Mail</a></li>
-                <li>Twitter: <a href="https://twitter.com/komm_klar_">komm_klar_</a></li>
-            </ol>
-        </article>
-    </main>
-    <footer class="footer">
-        <p class="footer-text">
-            Did you like my CV? 
-            <a class="footer-link" href="mailto:sascha.hurle@diesdas.com">
-                Contact me
-            </a>
-        </p>
 
-    </footer>
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">SH</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-blob hero-blob-1"></div>
+      <div class="hero-blob hero-blob-2"></div>
+      <div class="hero-grid"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge reveal">
+        <span class="badge-dot"></span>
+        Available for new projects
+      </div>
+      <h1 class="hero-title reveal">
+        <span class="hero-name">Sascha Hurle</span>
+        <span class="hero-role">Product Owner <br class="hero-br">&amp; Digital Strategist</span>
+      </h1>
+      <p class="hero-desc reveal">
+        Bridging the gap between users, business goals, and engineering teams.
+        Turning complex problems into clear, shippable solutions.
+      </p>
+      <div class="hero-actions reveal">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="hero-scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p class="section-label">About me</p>
+          <h2 class="section-title">Turning vision into <em>reality</em></h2>
+          <p class="about-body">
+            I'm a Product Owner based in Germany with years of experience leading cross-functional teams at companies like SWR and TeraVolt. I thrive at the intersection of user needs, technical constraints, and business strategy.
+          </p>
+          <p class="about-body">
+            Currently motivated to expand my skill set into software development — because the best product owners understand how the product is actually built.
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-number">5+</span>
+              <span class="stat-label">Years as PO</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">10+</span>
+              <span class="stat-label">Products shipped</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">3</span>
+              <span class="stat-label">Companies</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-card reveal">
+          <div class="card-inner">
+            <div class="card-avatar">
+              <div class="avatar-placeholder">SH</div>
+            </div>
+            <h3>Sascha Hurle</h3>
+            <p>Product Owner &amp; PO</p>
+            <div class="card-tags">
+              <span class="tag">Agile</span>
+              <span class="tag">Scrum</span>
+              <span class="tag">Roadmaps</span>
+              <span class="tag">User Stories</span>
+              <span class="tag">OKRs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="section section-alt" id="experience">
+    <div class="container">
+      <p class="section-label reveal">Career</p>
+      <h2 class="section-title reveal">Work Experience</h2>
+      <div class="timeline">
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Product Owner</h3>
+                <span class="timeline-company">SWR — Südwestrundfunk</span>
+              </div>
+              <span class="timeline-date">Jun 2021 — Present</span>
+            </div>
+            <p class="timeline-desc">
+              Leading product discovery and delivery for digital media products. Managing the backlog, facilitating sprint ceremonies, and aligning stakeholders across editorial and engineering teams.
+            </p>
+            <div class="timeline-tags">
+              <span class="tag tag-sm">Scrum</span>
+              <span class="tag tag-sm">Jira</span>
+              <span class="tag tag-sm">Confluence</span>
+              <span class="tag tag-sm">Product Strategy</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">PM / Product Owner</h3>
+                <span class="timeline-company">TeraVolt</span>
+              </div>
+              <span class="timeline-date">Apr 2018 — May 2021</span>
+            </div>
+            <p class="timeline-desc">
+              Managed digital products from ideation to launch. Collaborated closely with UX designers and software engineers to define requirements and deliver high-quality features on time.
+            </p>
+            <div class="timeline-tags">
+              <span class="tag tag-sm">Roadmapping</span>
+              <span class="tag tag-sm">Stakeholder Mgmt</span>
+              <span class="tag tag-sm">Agile</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section" id="projects">
+    <div class="container">
+      <p class="section-label reveal">Portfolio</p>
+      <h2 class="section-title reveal">Selected Projects</h2>
+      <div class="projects-grid">
+
+        <div class="project-card reveal">
+          <div class="project-accent" style="--accent: #6366f1;"></div>
+          <div class="project-body">
+            <div class="project-icon">📺</div>
+            <h3 class="project-title">SWR Media Platform</h3>
+            <p class="project-desc">
+              Owned the product strategy for a multi-platform media distribution service reaching millions of users. Led discovery, prioritization, and delivery over multiple release cycles.
+            </p>
+            <div class="project-tags">
+              <span class="tag tag-sm">Product Strategy</span>
+              <span class="tag tag-sm">Media</span>
+              <span class="tag tag-sm">B2C</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-accent" style="--accent: #ec4899;"></div>
+          <div class="project-body">
+            <div class="project-icon">⚡</div>
+            <h3 class="project-title">TeraVolt Dashboard</h3>
+            <p class="project-desc">
+              Defined and shipped an internal analytics dashboard used by operations and marketing teams to monitor KPIs in real time. Reduced reporting time by 60%.
+            </p>
+            <div class="project-tags">
+              <span class="tag tag-sm">B2B SaaS</span>
+              <span class="tag tag-sm">Analytics</span>
+              <span class="tag tag-sm">Internal Tools</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-accent" style="--accent: #10b981;"></div>
+          <div class="project-body">
+            <div class="project-icon">🌐</div>
+            <h3 class="project-title">Portfolio Website</h3>
+            <p class="project-desc">
+              Built this portfolio from scratch as part of my journey into software development — writing real HTML, CSS, and JavaScript to understand how products are engineered under the hood.
+            </p>
+            <div class="project-tags">
+              <span class="tag tag-sm">HTML</span>
+              <span class="tag tag-sm">CSS</span>
+              <span class="tag tag-sm">JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <p class="section-label reveal">Expertise</p>
+      <h2 class="section-title reveal">Skills &amp; Tools</h2>
+      <div class="skills-grid">
+
+        <div class="skill-group reveal">
+          <h3 class="skill-group-title">
+            <span class="skill-group-icon">🎯</span>
+            Product Management
+          </h3>
+          <div class="skill-tags">
+            <span class="tag">Product Strategy</span>
+            <span class="tag">Roadmapping</span>
+            <span class="tag">User Research</span>
+            <span class="tag">A/B Testing</span>
+            <span class="tag">OKRs &amp; KPIs</span>
+            <span class="tag">Backlog Refinement</span>
+            <span class="tag">Sprint Planning</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <h3 class="skill-group-title">
+            <span class="skill-group-icon">🤝</span>
+            Leadership &amp; Process
+          </h3>
+          <div class="skill-tags">
+            <span class="tag">Stakeholder Management</span>
+            <span class="tag">Scrum</span>
+            <span class="tag">Kanban</span>
+            <span class="tag">Cross-functional Teams</span>
+            <span class="tag">Workshop Facilitation</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <h3 class="skill-group-title">
+            <span class="skill-group-icon">🛠️</span>
+            Tools &amp; Tech
+          </h3>
+          <div class="skill-tags">
+            <span class="tag">Jira</span>
+            <span class="tag">Confluence</span>
+            <span class="tag">Figma</span>
+            <span class="tag">HTML &amp; CSS</span>
+            <span class="tag">Git</span>
+            <span class="tag">SQL (learning)</span>
+            <span class="tag">JavaScript (learning)</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <h3 class="skill-group-title">
+            <span class="skill-group-icon">💬</span>
+            Soft Skills
+          </h3>
+          <div class="skill-tags">
+            <span class="tag">Communication</span>
+            <span class="tag">Empathy</span>
+            <span class="tag">Problem Solving</span>
+            <span class="tag">Storytelling</span>
+            <span class="tag">Adaptability</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="contact-wrapper reveal">
+        <p class="section-label">Get in touch</p>
+        <h2 class="section-title">Let's work together</h2>
+        <p class="contact-desc">
+          Whether you have a product challenge, want to collaborate, or just want to say hi — my inbox is open.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:sascha.hurle@diesdas.com" class="contact-link">
+            <span class="contact-link-icon">✉️</span>
+            <div>
+              <span class="contact-link-label">Email</span>
+              <span class="contact-link-value">sascha.hurle@diesdas.com</span>
+            </div>
+          </a>
+          <a href="https://twitter.com/komm_klar_" class="contact-link" target="_blank" rel="noopener">
+            <span class="contact-link-icon">🐦</span>
+            <div>
+              <span class="contact-link-label">Twitter / X</span>
+              <span class="contact-link-value">@komm_klar_</span>
+            </div>
+          </a>
+          <a href="mailto:sascha.hurle@gmail.com" class="contact-link">
+            <span class="contact-link-icon">📬</span>
+            <div>
+              <span class="contact-link-label">Gmail</span>
+              <span class="contact-link-value">sascha.hurle@gmail.com</span>
+            </div>
+          </a>
+        </div>
+        <a href="mailto:sascha.hurle@diesdas.com" class="btn btn-primary btn-large">Send me a message</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-logo">SH</span>
+        <span class="footer-copy">© 2024 Sascha Hurle. Built with ❤️ and curiosity.</span>
+        <div class="footer-links">
+          <a href="mailto:sascha.hurle@diesdas.com">Email</a>
+          <a href="https://twitter.com/komm_klar_" target="_blank" rel="noopener">Twitter</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
