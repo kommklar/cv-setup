@@ -6,16 +6,16 @@
 }
 
 :root {
-  --bg: #0a0a0f;
-  --bg-alt: #0f0f18;
-  --bg-card: #14141f;
-  --border: rgba(255,255,255,0.07);
-  --border-hover: rgba(255,255,255,0.15);
-  --text: #f0f0f8;
-  --text-muted: #8888aa;
-  --accent: #6366f1;
-  --accent-2: #a78bfa;
-  --accent-glow: rgba(99,102,241,0.25);
+  --bg: #0e0c0a;
+  --bg-alt: #131108;
+  --bg-card: #1a1710;
+  --border: rgba(255,235,180,0.07);
+  --border-hover: rgba(255,235,180,0.18);
+  --text: #f4efe6;
+  --text-muted: #9e9076;
+  --accent: #c8a84a;
+  --accent-2: #e2c97e;
+  --accent-glow: rgba(200,168,74,0.25);
   --font-sans: 'Inter', system-ui, sans-serif;
   --font-display: 'Space Grotesk', system-ui, sans-serif;
   --radius: 12px;
@@ -332,7 +332,7 @@ em {
 .hero-blob-1 {
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, #6366f1, #a78bfa);
+  background: radial-gradient(circle, #c8a84a, #7a5e1a);
   top: -100px;
   right: -100px;
   animation: blobFloat 8s ease-in-out infinite;
@@ -341,7 +341,7 @@ em {
 .hero-blob-2 {
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, #ec4899, #6366f1);
+  background: radial-gradient(circle, #5a4010, #c8a84a);
   bottom: 0;
   left: -100px;
   animation: blobFloat 10s ease-in-out infinite reverse;
@@ -760,6 +760,115 @@ em {
   gap: 8px;
 }
 
+/* ===== Timeline list ===== */
+.timeline-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.timeline-list li {
+  padding-left: 16px;
+  position: relative;
+}
+
+.timeline-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 0.85rem;
+}
+
+/* ===== Education ===== */
+.edu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.edu-col {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  transition: border-color var(--transition);
+}
+
+.edu-col:hover {
+  border-color: var(--border-hover);
+}
+
+.edu-col-title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.edu-col-icon {
+  font-size: 1.2rem;
+}
+
+.edu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.edu-item {
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.edu-item:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.edu-degree {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.edu-school {
+  font-size: 0.85rem;
+  color: var(--accent-2);
+}
+
+.edu-year {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* ===== Contact plain (no hover) ===== */
+.contact-link-plain {
+  cursor: default;
+}
+
+.contact-link-plain:hover {
+  transform: none;
+  border-color: var(--border);
+  background: var(--bg-card);
+}
+
+/* ===== About card location ===== */
+.card-location {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: -4px;
+}
+
 /* ===== Contact ===== */
 .contact-wrapper {
   text-align: center;
@@ -878,6 +987,9 @@ em {
   }
   .about-card {
     max-width: 400px;
+  }
+  .edu-grid {
+    grid-template-columns: 1fr;
   }
 }
 
