@@ -48,6 +48,10 @@ const projects = {
     company: 'financial.com',
     period: '2023 — Present',
     accent: '#c8a84a',
+    images: [
+      { src: 'https://placehold.co/760x420/1a1710/c8a84a?text=Trading+Platform+UI', alt: 'Trading platform interface' },
+      { src: 'https://placehold.co/760x420/1a1710/c8a84a?text=Broker+Onboarding+Flow', alt: 'Broker onboarding flow' },
+    ],
     tags: ['FinTech', 'FIX Protocol', 'Compliance', 'B2C', 'Multi-venue'],
     overview: `financial.com is a financial data and technology provider. As Product Owner, I led the zero-to-one build of a fully modular broker platform — an end-to-end system covering everything from onboarding to live trading.`,
     sections: [
@@ -77,6 +81,10 @@ const projects = {
     company: 'Südwestrundfunk (SWR)',
     period: '2020 — 2023',
     accent: '#a07828',
+    images: [
+      { src: 'https://placehold.co/760x420/1a1710/a07828?text=SWR+Aktuell+Home+Screen', alt: 'SWR Aktuell home screen' },
+      { src: 'https://placehold.co/760x420/1a1710/a07828?text=SWR+Aktuell+Article+View', alt: 'SWR Aktuell article view' },
+    ],
     tags: ['Flutter', 'Mobile', 'iOS', 'Android', 'Public Media', 'News'],
     overview: `SWR (Südwestrundfunk) is one of Germany's major public broadcasters. As Product Owner, I led the full revamp of the SWR Aktuell news app — the primary digital news product for millions of users in Baden-Württemberg and Rhineland-Palatinate.`,
     sections: [
@@ -106,6 +114,10 @@ const projects = {
     company: 'TeraVolt GmbH',
     period: '2018 — 2020',
     accent: '#e2c97e',
+    images: [
+      { src: 'https://placehold.co/760x420/1a1710/e2c97e?text=DFL+Interactive+Feed+TV+App', alt: 'DFL Interactive Feed TV app' },
+      { src: 'https://placehold.co/760x420/1a1710/e2c97e?text=Bundesliga+Live+Stats+SDK', alt: 'Bundesliga live stats overlay' },
+    ],
     tags: ['SaaS', 'SDK', 'Bundesliga', 'DFL', 'Sky Germany', 'Broadcast'],
     overview: `TeraVolt is a media technology company specialising in broadcast and streaming products. As Product Owner, I bootstrapped and shipped a SaaS TV application platform delivered as a cross-platform SDK — in direct partnership with the Deutsche Fußball Liga (DFL).`,
     sections: [
@@ -133,6 +145,16 @@ const projects = {
 
 function buildDrawerContent(project) {
   const tagsHtml = project.tags.map(t => `<span class="tag tag-sm">${t}</span>`).join('');
+
+  const imagesHtml = project.images && project.images.length
+    ? `<div class="drawer-gallery">
+        ${project.images.map((img, i) => `
+          <figure class="drawer-figure ${i > 0 ? 'drawer-figure-secondary' : ''}">
+            <img src="${img.src}" alt="${img.alt}" loading="lazy">
+          </figure>`).join('')}
+      </div>`
+    : '';
+
   const sectionsHtml = project.sections.map(s => {
     if (s.items) {
       const items = s.items.map(i => `<li>${i}</li>`).join('');
@@ -157,6 +179,7 @@ function buildDrawerContent(project) {
     </div>
     <p class="drawer-overview">${project.overview}</p>
     <div class="drawer-tags">${tagsHtml}</div>
+    ${imagesHtml}
     ${sectionsHtml}
   `;
 }

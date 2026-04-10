@@ -1042,6 +1042,37 @@ em {
   position: relative;
 }
 
+/* ===== Drawer gallery ===== */
+.drawer-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.drawer-figure {
+  margin: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg);
+}
+
+.drawer-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.drawer-figure:hover img {
+  transform: scale(1.02);
+}
+
+.drawer-figure-secondary {
+  opacity: 0.85;
+}
+
 .drawer-list li::before {
   content: '→';
   position: absolute;
